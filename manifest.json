@@ -1,0 +1,20 @@
+{
+    "name": "Show Trello Card ID",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Simple extension to show Trello card ID",
+    "homepage_url": "https://trello.com/",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "default_locale": "en",
+    "permissions": ["tabs", "https://trello.com/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://trello.com/*"],
+            "js": ["src/inject/inject.js"]
+        }
+    ]
+}
